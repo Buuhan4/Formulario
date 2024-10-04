@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Acceso a <br><br> Ciclos Formativos de Grado Superior</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+        }
+        legend {
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+        }
+        .datos{
+            background-color: #a390b3;
+        }
+        .acceso{
+            background-color: #8ca2c2;
+        }
+        .documentos{
+            background-color: #7a9971;
+        }
+    .acceso-opcion{
+        margin-left: 50px;
+    }
+    .direccion{
+        width: 67%;
+    }       
+    </style>
+</head>
+<body>
+
+   
+        <h1>INFORMACIÓN DE ACCESO A LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h1>
+        
+        <fieldset class="datos">
+            <legend>Datos Personales</legend>
+            <table>
+                <tr>
+                    <td><label for="nombre">Nombre:</label></td>
+                    <td><label for="apellidos">Apellidos:</label></td>
+                    <td><label for="dni">DNI:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="nombre" name="nombre"></td>
+                    <td><input type="text" id="apellidos" name="apellidos"></td>
+                    <td><input type="text" id="dni" name="dni"></td>
+                </tr>
+                <tr>
+                    <td><label for="lugar_nacimiento">Lugar de Nacimiento:</label></td>
+                    <td><label for="provincia">Provincia:</label></td>
+                    <td><label for="fecha_nacimiento">Fecha de Nacimiento:</label></td>
+                </tr>
+                <tr>
+                    <td> <input type="text" id="lugar_nacimiento" name="lugar_nacimiento"></td>
+                    <td><select id="provincia" name="provincia">
+                        <option value="caceres">Cáceres</option>
+                        <option value="caceres">Badajoz</option>
+                        <option value="caceres">Sevilla</option>
+                        <option value="caceres">Madrid</option>
+                    </select></td>
+                    <td><input type="date" id="fecha_nacimiento" name="fecha_nacimiento"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">  <label for="direccion">Dirección:</label></td>
+                    <td><label for="codigo_postal">Código Postal:</label></td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2"><input class="direccion" type="text" id="direccion" name="direccion"></td>
+                    <td><input type="text" id="codigo_postal" name="codigo_postal"></td>
+                </tr>
+                
+            </table>
+        </fieldset>
+
+        <fieldset class="acceso">
+            <legend>Forma de Acceso</legend>
+            <div class="forma-acceso">
+                <div>
+                    <input type="radio" id="directo" name="forma_acceso" value="directo">
+                    <label for="directo">Directo</label>
+                </div>
+
+                
+
+                <div class="acceso-opcion">
+                    <input type="radio" id="bachillerato_radio" name="forma_acceso" value="bachillerato">
+                    <label for="bachillerato_radio">Bachillerato</label>
+                    <input type="text" id="bachillerato" name="bachillerato">
+                </div>
+
+                <div class="acceso-opcion">
+                    <input type="radio" id="universidad_radio" name="forma_acceso" value="universidad">
+                    <label for="universidad_radio">Universidad</label>
+                    <input type="text" id="universidad" name="universidad">
+                </div>
+
+                <div class="acceso-opcion">
+                    <input type="radio" id="grado_medio_radio" name="forma_acceso" value="grado_medio">
+                    <label for="grado_medio_radio">Grado Medio</label>
+                    <input type="text" id="grado_medio" name="grado_medio">
+                </div>
+
+                <div class="acceso-opcion">
+                    <input type="radio" id="otros_radio" name="forma_acceso" value="otros">
+                    <label for="otros_radio">Otros (especifique)</label>
+                    <input type="text" id="otros" name="otros">
+                </div>
+                <div>
+                    <input type="radio" id="prueba_libre" name="forma_acceso" value="prueba_libre">
+                    <label for="prueba_libre">Prueba Libre</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="documentos">
+            <legend>Documentos Adjuntados</legend>
+            <div class="checkbox-group">
+                <input type="checkbox" id="fotocopia_dni" name="documentos[]" value="fotocopia_dni">
+                <label for="fotocopia_dni">Fotocopia DNI</label>
+
+                <input type="checkbox" id="certificado_academico" name="documentos[]" value="certificado_academico">
+                <label for="certificado_academico">Certificado Académico</label>
+                <br>
+
+                <input type="checkbox" id="otros_documentos" name="documentos[]" value="otros_documentos">
+                <label for="otros_documentos">Otros documentos (especifique):</label>
+                <input type="text" id="otros_especificos" name="otros_especificos">
+            </div>
+        </fieldset>
+
+        <button type="submit" class="boton">Enviar Solicitud</button>
+
+
+</body>
+</html>
